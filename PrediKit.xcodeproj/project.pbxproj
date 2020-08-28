@@ -119,7 +119,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		287D0A6D1C4B73BD004566D6 /* PrediKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrediKitTests.swift; path = Tests/PrediKitTests.swift; sourceTree = SOURCE_ROOT; };
+		287D0A6D1C4B73BD004566D6 /* PrediKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrediKitTests.swift; path = PrediKitTests/PrediKitTests/PrediKitTests.swift; sourceTree = SOURCE_ROOT; };
 		28F8287D1C494B2C00330CF4 /* PrediKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F828871C494B2C00330CF4 /* PrediKit iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PrediKit iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAE5D3C1CFC6D130029355E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,8 +155,9 @@
 		5DAE5DE81CFC91440029355E /* PrediKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrediKit.h; sourceTree = "<group>"; };
 		5DAF1EAB1CFA9619006BAD71 /* PrediKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrediKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DAF1EB41CFA9619006BAD71 /* PrediKit OSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PrediKit OSXTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DDAE95D1CEA6F1100C01903 /* Keypaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keypaths.swift; path = Tests/Keypaths.swift; sourceTree = SOURCE_ROOT; };
+		5DDAE95D1CEA6F1100C01903 /* Keypaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keypaths.swift; path = PrediKitTests/PrediKitTests/Keypaths.swift; sourceTree = SOURCE_ROOT; };
 		5DDCFE071D8E77CB000DB59C /* Number+PrediKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+PrediKit.swift"; sourceTree = "<group>"; };
+		C6BEA5B924F951730013EB8F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +219,7 @@
 		28F828731C494B2C00330CF4 = {
 			isa = PBXGroup;
 			children = (
+				C6BEA5B924F951730013EB8F /* README.md */,
 				28F828971C494B4200330CF4 /* Sources */,
 				28F8288B1C494B2C00330CF4 /* Tests */,
 				5DAE5D3A1CFC6D130029355E /* Supporting Files */,
@@ -242,8 +244,7 @@
 		28F8288B1C494B2C00330CF4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				287D0A6D1C4B73BD004566D6 /* PrediKitTests.swift */,
-				5DDAE95D1CEA6F1100C01903 /* Keypaths.swift */,
+				C6BEA5BB24F951A40013EB8F /* PrediKitTests */,
 			);
 			name = Tests;
 			path = PrediKitTests;
@@ -252,11 +253,7 @@
 		28F828971C494B4200330CF4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				5DAE5DA71CFC7DDA0029355E /* Extensions */,
-				5DAE5D7A1CFC7D590029355E /* Protocols */,
-				5DAE5D9D1CFC7DAE0029355E /* Builders */,
-				5DAE5D7F1CFC7D590029355E /* Queries */,
-				5DAE5DAB1CFC7E1E0029355E /* Value Types */,
+				C6BEA5BA24F951810013EB8F /* PrediKitPackage */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -362,6 +359,27 @@
 				5DAE5DE71CFC91440029355E /* Info.plist */,
 			);
 			path = watchOS;
+			sourceTree = "<group>";
+		};
+		C6BEA5BA24F951810013EB8F /* PrediKitPackage */ = {
+			isa = PBXGroup;
+			children = (
+				5DAE5DA71CFC7DDA0029355E /* Extensions */,
+				5DAE5D7A1CFC7D590029355E /* Protocols */,
+				5DAE5D9D1CFC7DAE0029355E /* Builders */,
+				5DAE5D7F1CFC7D590029355E /* Queries */,
+				5DAE5DAB1CFC7E1E0029355E /* Value Types */,
+			);
+			path = PrediKitPackage;
+			sourceTree = "<group>";
+		};
+		C6BEA5BB24F951A40013EB8F /* PrediKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				287D0A6D1C4B73BD004566D6 /* PrediKitTests.swift */,
+				5DDAE95D1CEA6F1100C01903 /* Keypaths.swift */,
+			);
+			path = PrediKitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,6 +588,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 28F828731C494B2C00330CF4;
