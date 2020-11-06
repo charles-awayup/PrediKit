@@ -85,14 +85,6 @@ open class PredicateBuilder<T: Reflectable> {
     open func date(_ property: String, file: String = #file, line: Int = #line) -> DateQuery<T> {
         return DateQuery(builder: self, property: validatedProperty(property, file: file, line: line))
     }
-
-   open func date(_ property: KeyPath<T, Date>, file: String = #file, line: Int = #line) -> DateQuery<T> where T: NSObject {
-      date(property.name, file: file, line: line)
-   }
-
-   open func date(_ property: KeyPath<T, Date?>, file: String = #file, line: Int = #line) -> DateQuery<T> where T: NSObject {
-      date(property.name, file: file, line: line)
-   }
     
     /**
      Describes the key of class `T`'s `Bool` property you want to query. For example, when creating a predicate that checks against a given `Bool` flag in a class:
